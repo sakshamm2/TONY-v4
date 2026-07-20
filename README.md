@@ -141,7 +141,7 @@ T.O.N.Y. is built as an experimental foundation for exploring the future of pers
 
 # 🖼️ Screenshots
 
-# 🖼️ Dashboard
+# Dashboard
 
 <p align="center">
   <img src="assets/screenshots/dashboard.png" alt="T.O.N.Y. v4 Dashboard" width="900">
@@ -150,6 +150,10 @@ T.O.N.Y. is built as an experimental foundation for exploring the future of pers
 <p align="center">
   <i>Main dashboard showcasing the holographic HUD, live telemetry, conversation panel, and desktop AI interface.</i>
 </p>
+
+
+# 🏗️ Layered System Architecture
+T.O.N.Y. v4 follows a layered, event-driven architecture where each subsystem is responsible for a specific stage of the assistant's lifecycle. This separation of concerns improves scalability, maintainability, and enables independent evolution of the AI, voice, memory, planning, execution, and user interface layers.
 
                                    USER
                                      │
@@ -218,6 +222,8 @@ T.O.N.Y. is built as an experimental foundation for exploring the future of pers
                                      │
                                      ▼
                            Windows Operating System
+
+
 # 🔄 Request Workflow
 
 Every request follows a structured execution pipeline to ensure consistent processing and modularity.
