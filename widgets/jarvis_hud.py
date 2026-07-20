@@ -56,7 +56,7 @@ class JarvisHUDWidget(QWidget):
         self.orange = QColor(255, 185, 40)
         self.red = QColor(255, 70, 70)
 
-        # Animation Variables (RESTORED MISSING CORE_SCALE)
+        # Animation Variables 
         self.outer_rotation = 0.0
         self.middle_rotation = 0.0
         self.inner_rotation = 0.0
@@ -90,7 +90,7 @@ class JarvisHUDWidget(QWidget):
         self.execution_time = 0.0
         self.workflow_steps = []
 
-        # Animation Profiles (RESTORED FULL DICTIONARY WITH BRIGHTNESS)
+        # Animation Profiles 
         self._profiles = {
             "ONLINE": {
                 "speed": 1.00, "glow": 0.42, "pulse": 1.00, "brightness": 0.85,
