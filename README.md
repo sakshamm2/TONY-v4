@@ -109,33 +109,68 @@ The project combines conversational AI, desktop automation, persistent memory, a
 
 # 📂 Project Structure
 
-```
-TONY-v4
+```text
+TONY-v4/
 │
 ├── core/
+│   ├── agent/
+│   │
 │   ├── ai.py
 │   ├── assistant.py
+│   ├── command_parser.py
+│   ├── event_bus.py
+│   ├── logger.py
 │   ├── memory.py
 │   ├── service_manager.py
-│   └── ...
+│   ├── state.py
+│   ├── voice.py
+│   └── workers.py
 │
 ├── modules/
+│   ├── automation.py
+│   ├── memory_manager.py
+│   ├── pc_control.py
+│   ├── system_monitor.py
+│   └── web_tools.py
 │
 ├── renderers/
+│   ├── core.py
+│   ├── particles.py
+│   ├── radar.py
+│   ├── rings.py
+│   ├── telemetry.py
+│   └── waveform.py
 │
 ├── tools/
+│   ├── browser_tool.py
+│   ├── clipboard_tool.py
+│   ├── file_tool.py
+│   ├── memory_tool.py
+│   ├── pc_control_tool.py
+│   ├── process_tool.py
+│   ├── shell_tool.py
+│   └── system_tool.py
 │
 ├── widgets/
+│   ├── __init__.py
+│   ├── chat_bubble.py
+│   ├── glass_panel.py
+│   ├── jarvis_hud.py
+│   ├── status_bar.py
+│   ├── telemetry_card.py
+│   └── title_bar.py
 │
-├── dashboard.py
-├── main.py
+├── .gitignore
+├── README.md
+├── TONY_OS.spec
+├── Threads.md
 ├── config.py
+├── dashboard.py
+├── fix_enums.py
+├── main.py
 ├── requirements.txt
-└── README.md
+└── temp_response.mp3
 ```
-
----
-
 # 🛠 Tech Stack
 
 ### Programming
