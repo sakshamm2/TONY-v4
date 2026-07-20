@@ -8,6 +8,9 @@
   Voice Interaction • Long-Term Memory • Autonomous Planning • Desktop Automation • Modern Holographic UI
 </p>
 
+> **Status:** Active Development 🚧
+>
+> T.O.N.Y. v4 is under active development. Core features are stable while additional agent capabilities and integrations continue to be added.
 ---
 
 ## 📖 Overview
@@ -151,6 +154,21 @@ T.O.N.Y. is built as an experimental foundation for exploring the future of pers
   <i>Main dashboard showcasing the holographic HUD, live telemetry, conversation panel, and desktop AI interface.</i>
 </p>
 
+
+
+# ⚙️ Architecture Highlights
+
+T.O.N.Y. v4 is built around a modular, event-driven architecture designed for extensibility.
+
+- Layered architecture with clear separation of concerns
+- Event-driven communication between subsystems
+- Dedicated Agent Runtime for autonomous task execution
+- Pluggable desktop tool system
+- Persistent long-term memory
+- Reusable PySide6 widget framework
+- Independent rendering engine for holographic UI
+- Production-oriented project organization
+  
 
 
 # 🏗️ Layered System Architecture
@@ -523,6 +541,12 @@ Rather than focusing on a single feature, the long-term objective is to build a 
 - Persistent digital companion
 
 T.O.N.Y. is not intended to be another chatbot. It is an ongoing exploration of what a modern personal AI assistant can become when reasoning, memory, planning, voice interaction, and desktop automation are combined into a unified architecture.
+
+
+# 🔒 Security
+
+T.O.N.Y. includes desktop automation capabilities capable of interacting with the local operating system. Review commands before enabling autonomous execution and avoid exposing sensitive credentials within memory or configuration files.
+
 
 # 🤝 Contributing
 
