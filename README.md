@@ -220,4 +220,218 @@ T.O.N.Y. v4 is built around a modular architecture where each subsystem has a cl
 - **Maintainability** – Components communicate through well-defined interfaces, making the project easier to understand, test, and extend.
 - **Scalability** – The layered design allows future expansion, including vision support, plugin systems, multi-agent workflows, and cross-platform compatibility.
 
-- 
+
+# 🚀 Installation
+
+## 1. Clone the Repository
+
+```bash
+git clone https://github.com/sakshamm2/TONY-v4.git
+```
+
+## 2. Navigate to the Project
+
+```bash
+cd TONY-v4
+```
+
+## 3. Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+## 4. Launch T.O.N.Y.
+
+```bash
+python main.py
+```
+
+
+# ▶️ Getting Started
+
+After launching T.O.N.Y., you can interact using either voice commands or text input.
+
+The assistant automatically:
+
+- Processes natural language requests
+- Retrieves relevant memory
+- Plans multi-step tasks when required
+- Executes desktop actions
+- Displays results in the dashboard
+- Responds using synthesized speech
+
+
+  # 💬 Example Commands
+
+| User Command | T.O.N.Y. Action |
+|--------------|-----------------|
+| Open Calculator | Launches the Calculator application |
+| Open Chrome | Starts Google Chrome |
+| Create a folder named Projects | Creates a folder on the desktop |
+| Search Python tutorials | Opens browser with search results |
+| What's my CPU usage? | Displays live system statistics |
+| Remember that my favorite language is Python | Stores information in long-term memory |
+| What do you remember about me? | Retrieves stored memories |
+| Tell me today's date | Returns the current system date |
+| Open Downloads folder | Opens File Explorer in Downloads |
+
+
+---
+
+# 🎯 Current Capabilities
+
+T.O.N.Y. v4 is currently capable of:
+
+### 🤖 Artificial Intelligence
+- Natural language conversations
+- Context-aware responses
+- Goal-oriented reasoning
+- Intent understanding
+
+### 🧠 Memory System
+- Persistent long-term memory
+- Context retrieval
+- Memory management
+- Conversation continuity
+
+### 🎙️ Voice Interaction
+- Speech recognition
+- AI voice responses
+- Hands-free interaction
+
+### 🖥️ Desktop Automation
+- Open applications
+- Execute system commands
+- File & folder management
+- Browser automation
+- Clipboard operations
+- Process management
+
+### 📊 Live Monitoring
+- CPU usage
+- RAM usage
+- Disk information
+- System telemetry
+
+### 🎨 User Interface
+- Modern holographic HUD
+- Glassmorphism dashboard
+- Live telemetry cards
+- Animated visual effects
+- Real-time status indicators
+
+---
+
+# 📈 Roadmap
+
+## Completed
+
+- [x] Modern PySide6 Dashboard
+- [x] Holographic HUD
+- [x] Conversational AI
+- [x] Voice Recognition
+- [x] AI Speech Synthesis
+- [x] Persistent Memory
+- [x] Desktop Automation
+- [x] Agent Runtime
+- [x] Modular Architecture
+- [x] Live System Monitoring
+
+## Planned
+
+- [ ] Computer Vision
+- [ ] Multi-Agent Collaboration
+- [ ] Plugin Marketplace
+- [ ] Smart Workflow Builder
+- [ ] Calendar & Email Integration
+- [ ] Cross-Platform Support
+- [ ] Mobile Companion Application
+- [ ] Cloud Memory Synchronization
+
+---
+
+# 🤝 Contributing
+
+Contributions are welcome and appreciated.
+
+If you would like to contribute:
+
+1. Fork the repository.
+2. Create a new feature branch.
+
+```bash
+git checkout -b feature/my-feature
+```
+
+3. Commit your changes.
+
+```bash
+git commit -m "Add new feature"
+```
+
+4. Push the branch.
+
+```bash
+git push origin feature/my-feature
+```
+
+5. Open a Pull Request.
+
+Please ensure that all code follows the existing project architecture and coding style.
+
+---
+
+# 📄 License
+
+This project is licensed under the **MIT License**.
+
+You are free to use, modify, and distribute this software under the terms of the MIT License.
+
+---
+
+# 👨‍💻 Author
+
+## Saksham
+
+**Computer Science Engineering Student**
+
+Developer of **T.O.N.Y. v4** — an agentic desktop AI assistant focused on conversational intelligence, autonomous task execution, desktop automation, and modern interface design.
+
+GitHub:
+https://github.com/sakshamm2
+
+---
+
+# ⭐ Support the Project
+
+If you found this project useful or interesting:
+
+⭐ Star the repository
+
+🐛 Report bugs
+
+💡 Suggest new features
+
+🤝 Contribute to development
+
+---
+
+<p align="center">
+
+### Thank you for checking out T.O.N.Y. v4!
+
+**If you enjoyed this project, consider giving it a ⭐ on GitHub.**
+
+</p>
+
+
+# 📌 Project Statistics
+
+![Python](https://img.shields.io/badge/Python-3.12-blue)
+
+![Platform](https://img.shields.io/badge/Platform-Windows-success)
+
+![License](https://img.shields.io/badge/License-MIT-green)
+
+![Status](https://img.shields.io/badge/Status-Active-brightgreen)
