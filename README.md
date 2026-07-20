@@ -451,63 +451,47 @@ T.O.N.Y. v4 is currently capable of:
 
 ---
 
-# 🔮 Future Vision
+# 🔮 Project Vision
 
-T.O.N.Y. v4 is designed as a foundation for a truly autonomous personal AI assistant. While the current version focuses on desktop intelligence and task execution, the long-term vision is to evolve T.O.N.Y. into an adaptive, context-aware digital companion capable of assisting across devices and environments.
+T.O.N.Y. v4 is an ongoing exploration of what a modern desktop AI assistant can become when conversational intelligence, long-term memory, autonomous planning, and desktop automation are combined into a unified architecture.
 
-## 🧠 Advanced Cognitive Capabilities
+The current implementation provides a modular foundation that is intentionally designed to support future expansion. As the project evolves, the goal is to extend T.O.N.Y. with more advanced capabilities while preserving its layered, maintainable architecture.
 
-- Multi-agent collaboration
-- Long-term episodic memory
-- Semantic knowledge graph
-- Personalized reasoning and preferences
-- Self-reflection and performance optimization
+## Planned Directions
 
----
+### 🧠 Cognitive Intelligence
+- Semantic long-term memory
+- Personalized user preferences
+- Context-aware reasoning
+- Goal decomposition and adaptive planning
 
-## 👁️ Multimodal Intelligence
-
+### 👁️ Multimodal Interaction
 - Computer vision
 - Screen understanding
 - OCR and document analysis
-- Image reasoning
-- Camera integration
+- Image-based reasoning
 
----
-
-## 🖥️ Desktop Intelligence
-
+### 🖥️ Desktop Intelligence
 - Autonomous workflow automation
 - Intelligent file organization
-- Background task execution
-- Application orchestration
-- Cross-application automation
+- Cross-application task execution
+- Background automation agents
 
----
-
-## 🌐 Cloud & Connectivity
-
+### 🌐 Connected Ecosystem
+- Calendar integration
+- Email assistance
 - Cloud memory synchronization
 - Cross-device continuity
-- Calendar integration
-- Email management
-- Knowledge base synchronization
+
+### 🧩 Extensible Platform
+- Plugin architecture
+- Public Tool SDK
+- Workflow designer
+- Community-built extensions
 
 ---
 
-## 🧩 Extensible Platform
-
-- Plugin ecosystem
-- Third-party tool integration
-- Custom workflows
-- API support
-- Community extensions
-
----
-
-## 🤖 Toward a True AI Companion
-
-The long-term goal is to transform T.O.N.Y. from a desktop assistant into an intelligent software companion capable of understanding context, learning from experience, planning independently, and collaborating with users to accomplish complex real-world tasks.
+Rather than focusing on a single feature, the long-term objective is to build a modular personal AI assistant capable of **understanding, remembering, planning, and acting** across desktop environments while remaining transparent, extensible, and developer-friendly.
 
 
 
