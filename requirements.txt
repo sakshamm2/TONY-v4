@@ -1,0 +1,16 @@
+# T.O.N.Y. v4 - Core Dependencies
+
+# UI Framework
+PyQt6
+
+# AI & Voice 
+google-generativeai
+edge-tts
+
+# System Telemetry & Automation
+psutil
+PyAutoGUI
+
+# Web Tools & Scraping
+requests
+beautifulsoup4
