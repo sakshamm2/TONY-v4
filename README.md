@@ -152,77 +152,71 @@ T.O.N.Y. is built as an experimental foundation for exploring the future of pers
 </p>
 
 
+
 # 🏗️ Layered System Architecture
-T.O.N.Y. v4 follows a layered, event-driven architecture where each subsystem is responsible for a specific stage of the assistant's lifecycle. This separation of concerns improves scalability, maintainability, and enables independent evolution of the AI, voice, memory, planning, execution, and user interface layers.
 
-                                   USER
-                                     │
-                 Voice Commands / Text Input
-                                     │
-                                     ▼
-                         ┌────────────────────┐
-                         │     Dashboard      │
-                         │   (PySide6 UI)     │
-                         └────────────────────┘
-                                     │
-                                     ▼
-                     ┌──────────────────────────┐
-                     │ Assistant Controller     │
-                     └──────────────────────────┘
-                                     │
-      ┌───────────────┬──────────────┴───────────────┬───────────────┐
-      ▼               ▼                              ▼               ▼
-┌──────────┐   ┌──────────────┐             ┌────────────────┐  ┌──────────────┐
-│ AI Engine│   │ Voice Engine │             │ Memory Service │  │ Event Bus    │
-└──────────┘   └──────────────┘             └────────────────┘  └──────────────┘
-                                     │
-                                     ▼
-                      ┌──────────────────────────┐
-                      │     Agent Runtime        │
-                      └──────────────────────────┘
-                                     │
-                                     ▼
-                           ┌────────────────┐
-                           │ Intent Router  │
-                           └────────────────┘
-                                     │
-                                     ▼
-                          ┌──────────────────┐
-                          │ Global Planner   │
-                          └──────────────────┘
-                                     │
-                                     ▼
-                          ┌──────────────────┐
-                          │ Local Planner    │
-                          └──────────────────┘
-                                     │
-                                     ▼
-                        ┌────────────────────────┐
-                        │ Workflow Engine        │
-                        └────────────────────────┘
-                                     │
-                                     ▼
-                           ┌────────────────┐
-                           │ Task Queue     │
-                           └────────────────┘
-                                     │
-                                     ▼
-                           ┌────────────────┐
-                           │ Executor       │
-                           └────────────────┘
-                                     │
-                                     ▼
-                        ┌────────────────────────┐
-                        │ Tool Registry          │
-                        └────────────────────────┘
-                                     │
-      ┌───────────┬───────────┬─────────────┬─────────────┬─────────────┐
-      ▼           ▼           ▼             ▼             ▼
-   Browser      Files     Clipboard      Shell      PC Control
-                                     │
-                                     ▼
-                           Windows Operating System
+T.O.N.Y. v4 follows a layered, event-driven architecture where each subsystem has a dedicated responsibility. User interaction flows through the dashboard, into the assistant controller, through the AI and agent pipeline, and finally to desktop tools that interact with the operating system.
 
+```mermaid
+flowchart TD
+
+    U[User]
+    D[Dashboard<br/>PySide6 UI]
+    AC[Assistant Controller]
+
+    AI[AI Engine]
+    VE[Voice Engine]
+    MS[Memory Service]
+    EB[Event Bus]
+
+    AR[Agent Runtime]
+    IR[Intent Router]
+    GP[Global Planner]
+    LP[Local Planner]
+    WF[Workflow Engine]
+    TQ[Task Queue]
+    EX[Executor]
+    TR[Tool Registry]
+
+    B[Browser]
+    F[Files]
+    C[Clipboard]
+    S[Shell]
+    PC[PC Control]
+
+    OS[Windows Operating System]
+
+    U --> D
+    D --> AC
+
+    AC --> AI
+    AC --> VE
+    AC --> MS
+    AC --> EB
+
+    AI --> AR
+    MS --> AR
+
+    AR --> IR
+    IR --> GP
+    GP --> LP
+    LP --> WF
+    WF --> TQ
+    TQ --> EX
+    EX --> TR
+
+    TR --> B
+    TR --> F
+    TR --> C
+    TR --> S
+    TR --> PC
+
+    B --> OS
+    F --> OS
+    C --> OS
+    S --> OS
+    PC --> OS
+```
 
 # 🔄 Request Workflow
 
