@@ -38,41 +38,15 @@ T.O.N.Y. v4 combines conversational AI, autonomous task planning, persistent mem
 
 # 🖼️ Screenshots
 
-## Dashboard
+# 🖼️ Dashboard
 
-![Dashboard](assets/screenshots/dashboard.png)
+<p align="center">
+  <img src="assets/screenshots/dashboard.png" alt="T.O.N.Y. v4 Dashboard" width="900">
+</p>
 
----
-
-## Listening Mode
-
-![Listening](assets/screenshots/listening.png)
-
----
-
-## Thinking Mode
-
-![Thinking](assets/screenshots/thinking.png)
-
----
-
-## Speaking Mode
-
-![Speaking](assets/screenshots/speaking.png)
-
----
-
-## Agent Planner
-
-![Planner](assets/screenshots/planner.png)
-
----
-
-## Memory System
-
-![Memory](assets/screenshots/memory.png)
-
----
+<p align="center">
+  <i>Main dashboard showcasing the holographic HUD, live telemetry, conversation panel, and desktop AI interface.</i>
+</p>
 
 # 🏗️ System Architecture
 
