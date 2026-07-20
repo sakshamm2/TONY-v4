@@ -24,7 +24,7 @@ class GlassPanel(QFrame):
     def _build_ui(self) -> None:
         self.setObjectName("GlassPanel")
         
-        # Apply the foundational glassmorphic style
+        # foundational glassmorphic style
         self.setStyleSheet("""
             QFrame#GlassPanel {
                 background: rgba(20, 28, 40, 190);
