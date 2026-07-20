@@ -16,8 +16,7 @@ T.O.N.Y. (Technologically Optimized Neural Yielder) v4 is a next-generation desk
 
 Unlike traditional chatbots, T.O.N.Y. is designed as an **Agentic AI Assistant** capable of understanding goals, planning tasks, remembering context, interacting through voice, and automating desktop operations.
 
-The project combines conversational AI, desktop automation, persistent memory, and a futuristic holographic user interface inspired by Iron Man's J.A.R.V.I.S.
-
+T.O.N.Y. v4 combines conversational AI, autonomous task planning, persistent memory, voice interaction, desktop automation, and a futuristic holographic interface into a unified modular platform. Built using a layered architecture, each subsystem has a dedicated responsibility, making the project scalable, maintainable, and easy to extend.
 ---
 
 # ✨ Features
@@ -75,216 +74,150 @@ The project combines conversational AI, desktop automation, persistent memory, a
 
 ---
 
-# 🏗 Architecture
+# 🏗️ System Architecture
 
-```
-                    User
-                      │
-        ┌─────────────┴─────────────┐
-        │                           │
-    Voice Input                Text Input
-        │                           │
-        └─────────────┬─────────────┘
-                      │
-             Assistant Controller
-                      │
-        ┌─────────────┴─────────────┐
-        │                           │
-     AI Engine                 Memory Engine
-        │                           │
-        └─────────────┬─────────────┘
-                      │
-                Agent Runtime
-                      │
-              Goal & Task Planner
-                      │
-                 Task Executor
-                      │
-        ┌─────────────┴─────────────┐
-        │                           │
-    Desktop Tools           System Services
-```
-
----
-
-# 📂 Project Structure
+T.O.N.Y. v4 follows a modular layered architecture where every component has a dedicated responsibility. The user interface handles interactions, the Assistant Controller coordinates all subsystems, the AI Engine performs reasoning, the Agent Runtime plans multi-step tasks, and specialized tools interact with the operating system.
 
 ```text
-TONY-v4/
-│
-├── core/
-│   ├── agent/
-│   │
-│   ├── ai.py
-│   ├── assistant.py
-│   ├── command_parser.py
-│   ├── event_bus.py
-│   ├── logger.py
-│   ├── memory.py
-│   ├── service_manager.py
-│   ├── state.py
-│   ├── voice.py
-│   └── workers.py
-│
-├── modules/
-│   ├── automation.py
-│   ├── memory_manager.py
-│   ├── pc_control.py
-│   ├── system_monitor.py
-│   └── web_tools.py
-│
-├── renderers/
-│   ├── core.py
-│   ├── particles.py
-│   ├── radar.py
-│   ├── rings.py
-│   ├── telemetry.py
-│   └── waveform.py
-│
-├── tools/
-│   ├── browser_tool.py
-│   ├── clipboard_tool.py
-│   ├── file_tool.py
-│   ├── memory_tool.py
-│   ├── pc_control_tool.py
-│   ├── process_tool.py
-│   ├── shell_tool.py
-│   └── system_tool.py
-│
-├── widgets/
-│   ├── __init__.py
-│   ├── chat_bubble.py
-│   ├── glass_panel.py
-│   ├── jarvis_hud.py
-│   ├── status_bar.py
-│   ├── telemetry_card.py
-│   └── title_bar.py
-│
-├── .gitignore
-├── README.md
-├── TONY_OS.spec
-├── Threads.md
-├── config.py
-├── dashboard.py
-├── fix_enums.py
-├── main.py
-├── requirements.txt
-└── temp_response.mp3
+                              USER
+                                │
+                 Voice Commands / Text Input
+                                │
+                                ▼
+                     Dashboard (PySide6 UI)
+                                │
+                                ▼
+                   Assistant Controller
+                                │
+         ┌──────────────────────┼──────────────────────┐
+         ▼                      ▼                      ▼
+    AI Engine             Voice Engine          Memory Service
+         │
+         ▼
+     Agent Runtime
+         │
+         ▼
+   Intent Router
+         │
+         ▼
+       Planner
+         │
+         ▼
+ Workflow Engine
+         │
+         ▼
+      Executor
+         │
+         ▼
+    Tool Registry
+         │
+ ┌───────┼────────┬─────────┬───────────┐
+ ▼       ▼        ▼         ▼           ▼
+Files  Browser  Clipboard  Shell   PC Control
+         │
+         ▼
+ Windows Operating System
 ```
+# 🔄 Request Workflow
+
+Every request follows a structured execution pipeline to ensure consistent processing and modularity.
+
+```text
+User
+
+↓
+
+Dashboard receives command
+
+↓
+
+Assistant Controller processes request
+
+↓
+
+AI Engine understands intent
+
+↓
+
+Memory retrieves relevant context
+
+↓
+
+Agent Runtime creates an execution plan
+
+↓
+
+Planner breaks goal into executable tasks
+
+↓
+
+Executor performs each task
+
+↓
+
+Tools interact with Windows
+
+↓
+
+Assistant receives the result
+
+↓
+
+Dashboard updates the interface
+
+↓
+
+Voice Engine speaks the response
+```
+
+# 🧩 Core Components
+
+| Component | Responsibility |
+|-----------|----------------|
+| Dashboard | Main application window and user interaction |
+| Widgets | Reusable interface components such as HUD, chat panel, telemetry cards, and status bar |
+| Assistant Controller | Central coordinator that manages all subsystems |
+| AI Engine | Processes prompts and generates intelligent responses |
+| Voice Engine | Handles speech recognition and text-to-speech |
+| Memory System | Stores and retrieves long-term conversation context |
+| Agent Runtime | Converts user goals into executable workflows |
+| Planner | Breaks complex goals into smaller tasks |
+| Executor | Executes planned tasks in sequence |
+| Tool Layer | Provides access to operating system functionality |
+| Modules | Backend services such as monitoring and automation |
+| Renderers | Draw the holographic HUD and visual effects |
+
+# 📁 Folder Overview
+
+| Folder | Purpose |
+|---------|---------|
+| **core/** | Core application logic including AI, voice, memory, assistant controller, workers, and the agent runtime |
+| **modules/** | Backend services such as automation, system monitoring, memory management, and desktop control |
+| **renderers/** | Rendering engine responsible for the radar, rings, particles, waveform, and telemetry animations |
+| **tools/** | Desktop capability layer providing browser, file, clipboard, shell, process, and PC control tools |
+| **widgets/** | Reusable PySide6 user interface components used throughout the dashboard |
+
 # 🛠 Tech Stack
 
-### Programming
+| Category | Technologies |
+|----------|--------------|
+| **Programming Language** | Python 3.12+ |
+| **GUI Framework** | PySide6 (Qt) |
+| **Artificial Intelligence** | Google Gemini |
+| **Voice Recognition** | SpeechRecognition |
+| **Speech Synthesis** | Windows SAPI |
+| **Desktop Automation** | PyAutoGUI, Windows APIs |
+| **System Monitoring** | psutil |
+| **Storage** | SQLite |
+| **Version Control** | Git & GitHub |
 
-- Python 3.12+
+# 🏛️ Design Principles
 
-### GUI
+T.O.N.Y. v4 is built around a modular architecture where each subsystem has a clearly defined responsibility.
 
-- PySide6 (Qt)
+- **Separation of Concerns** – User interface, AI, memory, rendering, and desktop automation are isolated into independent modules.
+- **Modularity** – New tools, widgets, and agent capabilities can be integrated without affecting the overall architecture.
+- **Maintainability** – Components communicate through well-defined interfaces, making the project easier to understand, test, and extend.
+- **Scalability** – The layered design allows future expansion, including vision support, plugin systems, multi-agent workflows, and cross-platform compatibility.
 
-### AI
-
-- Google Gemini
-
-### Voice
-
-- SpeechRecognition
-- Windows SAPI
-
-### Desktop Automation
-
-- PyAutoGUI
-- OS APIs
-
-### Monitoring
-
-- psutil
-
-### Storage
-
-- SQLite
-
----
-
-# 🚀 Installation
-
-Clone the repository
-
-```bash
-git clone https://github.com/sakshamm2/TONY-v4.git
-```
-
-Move into the project
-
-```bash
-cd TONY-v4
-```
-
-Install dependencies
-
-```bash
-pip install -r requirements.txt
-```
-
-Run
-
-```bash
-python main.py
-```
-
----
-
-# 🎯 Current Capabilities
-
-- Conversational AI
-- Voice Commands
-- Persistent Memory
-- Autonomous Planning
-- Desktop Automation
-- File Management
-- Live System Monitoring
-- Modern Desktop Interface
-
----
-
-# 📈 Roadmap
-
-- [x] AI Conversation Engine
-- [x] Voice Interaction
-- [x] Long-Term Memory
-- [x] Desktop Automation
-- [x] Agent Runtime
-- [x] Modern HUD Interface
-- [ ] Vision Support
-- [ ] Multi-Agent Collaboration
-- [ ] Plugin Ecosystem
-- [ ] Cross-Platform Support
-
----
-
-# 🤝 Contributing
-
-Contributions are welcome.
-
-Feel free to fork the repository, create a feature branch, and submit a pull request.
-
----
-
-# 📄 License
-
-This project is licensed under the MIT License.
-
----
-
-# 👨‍💻 Author
-
-**Saksham**
-
-Computer Science Engineer
-
-GitHub: https://github.com/sakshamm2
-
----
-
-<p align="center">
-⭐ If you like this project, consider giving it a star!
-</p>
+- 
