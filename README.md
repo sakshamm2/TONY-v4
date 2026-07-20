@@ -19,6 +19,87 @@ Unlike traditional chatbots, T.O.N.Y. is designed as an **Agentic AI Assistant**
 T.O.N.Y. v4 combines conversational AI, autonomous task planning, persistent memory, voice interaction, desktop automation, and a futuristic holographic interface into a unified modular platform. Built using a layered architecture, each subsystem has a dedicated responsibility, making the project scalable, maintainable, and easy to extend.
 ---
 
+
+# 📂 Project Structure
+
+```text
+TONY-v4/
+│
+├── core/
+│   ├── agent/
+│   │   ├── agent.py
+│   │   ├── executor.py
+│   │   ├── goal.py
+│   │   ├── local_planner.py
+│   │   ├── planner.py
+│   │   ├── router.py
+│   │   ├── runtime.py
+│   │   ├── task.py
+│   │   ├── task_queue.py
+│   │   ├── tool.py
+│   │   ├── tool_registry.py
+│   │   ├── workflow.py
+│   │   ├── workflow_engine.py
+│   │   ├── workflow_state.py
+│   │   └── workflow_step.py
+│   │
+│   ├── ai.py
+│   ├── assistant.py
+│   ├── command_parser.py
+│   ├── event_bus.py
+│   ├── logger.py
+│   ├── memory.py
+│   ├── service_manager.py
+│   ├── state.py
+│   ├── voice.py
+│   └── workers.py
+│
+├── modules/
+│   ├── automation.py
+│   ├── memory_manager.py
+│   ├── pc_control.py
+│   ├── system_monitor.py
+│   └── web_tools.py
+│
+├── renderers/
+│   ├── core.py
+│   ├── particles.py
+│   ├── radar.py
+│   ├── rings.py
+│   ├── telemetry.py
+│   └── waveform.py
+│
+├── tools/
+│   ├── browser_tool.py
+│   ├── clipboard_tool.py
+│   ├── file_tool.py
+│   ├── memory_tool.py
+│   ├── pc_control_tool.py
+│   ├── process_tool.py
+│   ├── shell_tool.py
+│   └── system_tool.py
+│
+├── widgets/
+│   ├── __init__.py
+│   ├── chat_bubble.py
+│   ├── glass_panel.py
+│   ├── jarvis_hud.py
+│   ├── status_bar.py
+│   ├── telemetry_card.py
+│   └── title_bar.py
+│
+├── assets/
+│   └── screenshots/
+│       └── dashboard.png
+│
+├── dashboard.py
+├── config.py
+├── main.py
+├── requirements.txt
+├── README.md
+├── TONY_OS.spec
+└── Threads.md
+```
 # ✨ Features
 
 - 🧠 Agentic AI Architecture
