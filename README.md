@@ -100,6 +100,28 @@ TONY-v4/
 ├── TONY_OS.spec
 └── Threads.md
 ```
+
+# 💡 Why T.O.N.Y.?
+
+Most desktop assistants execute one command at a time—they respond to a prompt and stop.
+
+T.O.N.Y. v4 is designed with a different philosophy. Instead of acting as a simple chatbot, it behaves as an **agentic desktop AI** capable of understanding user goals, planning multi-step workflows, remembering previous interactions, and interacting with the operating system through a modular execution pipeline.
+
+The project combines conversational intelligence, long-term memory, autonomous planning, voice interaction, desktop automation, and a modern holographic interface into a single extensible platform.
+
+### What makes T.O.N.Y. different?
+
+- 🧠 Goal-oriented reasoning instead of single-step responses
+- ⚡ Autonomous task planning and execution
+- 💬 Persistent long-term memory for personalized interactions
+- 🎙️ Natural voice conversations
+- 🖥️ Direct desktop automation through modular tools
+- 🏗️ Production-oriented architecture designed for scalability and maintainability
+- 🎨 Futuristic J.A.R.V.I.S.-inspired interface built with PySide6
+
+T.O.N.Y. is built as an experimental foundation for exploring the future of personal AI assistants that can **reason, remember, plan, and act** rather than simply answer questions.
+
+
 # ✨ Features
 
 - 🧠 Agentic AI Architecture
@@ -129,50 +151,73 @@ TONY-v4/
   <i>Main dashboard showcasing the holographic HUD, live telemetry, conversation panel, and desktop AI interface.</i>
 </p>
 
-# 🏗️ System Architecture
-
-T.O.N.Y. v4 follows a modular layered architecture where every component has a dedicated responsibility. The user interface handles interactions, the Assistant Controller coordinates all subsystems, the AI Engine performs reasoning, the Agent Runtime plans multi-step tasks, and specialized tools interact with the operating system.
-
-```text
-                              USER
-                                │
+                                   USER
+                                     │
                  Voice Commands / Text Input
-                                │
-                                ▼
-                     Dashboard (PySide6 UI)
-                                │
-                                ▼
-                   Assistant Controller
-                                │
-         ┌──────────────────────┼──────────────────────┐
-         ▼                      ▼                      ▼
-    AI Engine             Voice Engine          Memory Service
-         │
-         ▼
-     Agent Runtime
-         │
-         ▼
-   Intent Router
-         │
-         ▼
-       Planner
-         │
-         ▼
- Workflow Engine
-         │
-         ▼
-      Executor
-         │
-         ▼
-    Tool Registry
-         │
- ┌───────┼────────┬─────────┬───────────┐
- ▼       ▼        ▼         ▼           ▼
-Files  Browser  Clipboard  Shell   PC Control
-         │
-         ▼
- Windows Operating System
-```
+                                     │
+                                     ▼
+                         ┌────────────────────┐
+                         │     Dashboard      │
+                         │   (PySide6 UI)     │
+                         └────────────────────┘
+                                     │
+                                     ▼
+                     ┌──────────────────────────┐
+                     │ Assistant Controller     │
+                     └──────────────────────────┘
+                                     │
+      ┌───────────────┬──────────────┴───────────────┬───────────────┐
+      ▼               ▼                              ▼               ▼
+┌──────────┐   ┌──────────────┐             ┌────────────────┐  ┌──────────────┐
+│ AI Engine│   │ Voice Engine │             │ Memory Service │  │ Event Bus    │
+└──────────┘   └──────────────┘             └────────────────┘  └──────────────┘
+                                     │
+                                     ▼
+                      ┌──────────────────────────┐
+                      │     Agent Runtime        │
+                      └──────────────────────────┘
+                                     │
+                                     ▼
+                           ┌────────────────┐
+                           │ Intent Router  │
+                           └────────────────┘
+                                     │
+                                     ▼
+                          ┌──────────────────┐
+                          │ Global Planner   │
+                          └──────────────────┘
+                                     │
+                                     ▼
+                          ┌──────────────────┐
+                          │ Local Planner    │
+                          └──────────────────┘
+                                     │
+                                     ▼
+                        ┌────────────────────────┐
+                        │ Workflow Engine        │
+                        └────────────────────────┘
+                                     │
+                                     ▼
+                           ┌────────────────┐
+                           │ Task Queue     │
+                           └────────────────┘
+                                     │
+                                     ▼
+                           ┌────────────────┐
+                           │ Executor       │
+                           └────────────────┘
+                                     │
+                                     ▼
+                        ┌────────────────────────┐
+                        │ Tool Registry          │
+                        └────────────────────────┘
+                                     │
+      ┌───────────┬───────────┬─────────────┬─────────────┬─────────────┐
+      ▼           ▼           ▼             ▼             ▼
+   Browser      Files     Clipboard      Shell      PC Control
+                                     │
+                                     ▼
+                           Windows Operating System
 # 🔄 Request Workflow
 
 Every request follows a structured execution pipeline to ensure consistent processing and modularity.
